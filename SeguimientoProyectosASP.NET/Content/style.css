@@ -1,0 +1,79 @@
+body {
+	padding-top: 30px;
+}
+
+.oculto {
+	display: none;
+}
+
+.visto {
+	display: inline;
+}
+
+.platillo img{
+	border-radius: 5px;
+	box-shadow: rgba(0,0,0,0.5) 5px 5px 10px;
+}
+
+.margen-superior {
+	margin-top: 6px;
+ }
+
+.margen-inferior {
+	margin-bottom: 10px;
+ }
+ 
+.flash-mensaje {
+	position: fixed;
+	top: 55px;
+	right: 10px;
+	z-index: 10000;
+}
+
+.imagen-pedidos {
+    height: 60px;
+}
+
+div.nav.navbar-nav>.btn.navbar-btn {
+	margin-left: 15px;
+}
+
+.ui-front {
+	z-index: 1000000000 !important;
+}
+
+form .error {
+	background: #FFDACC;
+	-moz-border-radius: 4px;
+	-webkit-border-radius: 4px;
+	border-radius: 4px;
+	font-weight: normal;
+}
+
+form .error-message {
+	-moz-border-radius: none;
+	-webkit-border-radius: none;
+	border-radius: none;
+	border: none;
+	background: none;
+	margin: 0;
+	padding-left: 4px;
+	padding-right: 0;
+}
+
+form .error, form .error-message {
+	color: #9E2424;
+	-webkit-box-shadow: none;
+	-moz-box-shadow: none;
+	-ms-box-shadow: none;
+	-o-box-shadow: none;
+	box-shadow: none;
+	text-shadow: none;
+}
+
+input.form-error {
+	-moz-border-radius: 4px;
+	-webkit-border-radius: 4px;
+	border-radius: 4px;
+	border: 2px red solid;
+}

@@ -1,0 +1,119 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="SeguimientoProyectosModel" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+  <EntityType Name="Proyecto">
+    <Key>
+      <PropertyRef Name="codigo" />
+    </Key>
+    <Property Name="codigo" Type="Decimal" Precision="7" Scale="0" Nullable="false" />
+    <Property Name="nombre" Type="String" MaxLength="150" FixedLength="false" Unicode="false" />
+    <Property Name="descripcion" Type="String" MaxLength="500" FixedLength="false" Unicode="false" />
+    <Property Name="fecha_inicio" Type="DateTime" Precision="0" />
+    <Property Name="fecha_fin" Type="DateTime" Precision="0" />
+    <Property Name="responsable" Type="String" MaxLength="30" FixedLength="false" Unicode="false" />
+    <NavigationProperty Name="Usuario" Relationship="Self.TM_PROYECTO_TM_USUARIO" FromRole="Proyecto" ToRole="Usuario" />
+    <NavigationProperty Name="Tarea" Relationship="Self.TM_TAREA_TM_PROYECTO" FromRole="Proyecto" ToRole="Tarea" />
+  </EntityType>
+  <EntityType Name="Responsable">
+    <Key>
+      <PropertyRef Name="codigo" />
+    </Key>
+    <Property Name="codigo" Type="Decimal" Precision="7" Scale="0" Nullable="false" />
+    <Property Name="codigo_tarea" Type="Decimal" Precision="7" Scale="0" />
+    <Property Name="codigo_usuario" Type="String" MaxLength="30" FixedLength="false" Unicode="false" />
+    <NavigationProperty Name="Tarea" Relationship="Self.TM_RESPONSABLE_TM_TAREA" FromRole="Responsable" ToRole="Tarea" />
+    <NavigationProperty Name="Usuario" Relationship="Self.TM_RESPONSABLE_TM_USUARIO" FromRole="Responsable" ToRole="Usuario" />
+  </EntityType>
+  <EntityType Name="Tarea">
+    <Key>
+      <PropertyRef Name="codigo" />
+    </Key>
+    <Property Name="codigo" Type="Decimal" Precision="7" Scale="0" Nullable="false" />
+    <Property Name="nombre" Type="String" MaxLength="150" FixedLength="false" Unicode="false" />
+    <Property Name="descripcion" Type="String" MaxLength="500" FixedLength="false" Unicode="false" />
+    <Property Name="codigo_proyecto" Type="Decimal" Precision="7" Scale="0" />
+    <NavigationProperty Name="Proyecto" Relationship="Self.TM_TAREA_TM_PROYECTO" FromRole="Tarea" ToRole="Proyecto" />
+    <NavigationProperty Name="Responsable" Relationship="Self.TM_RESPONSABLE_TM_TAREA" FromRole="Tarea" ToRole="Responsable" />
+  </EntityType>
+  <EntityType Name="Usuario">
+    <Key>
+      <PropertyRef Name="codigo" />
+    </Key>
+    <Property Name="codigo" Type="String" MaxLength="30" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="nombres" Type="String" MaxLength="150" FixedLength="false" Unicode="false" />
+    <Property Name="apellidos" Type="String" MaxLength="150" FixedLength="false" Unicode="false" />
+    <Property Name="fecha_nacimiento" Type="DateTime" Precision="0" />
+    <Property Name="password" Type="String" MaxLength="32" FixedLength="false" Unicode="false" />
+    <NavigationProperty Name="Proyecto" Relationship="Self.TM_PROYECTO_TM_USUARIO" FromRole="Usuario" ToRole="Proyecto" />
+    <NavigationProperty Name="Responsable" Relationship="Self.TM_RESPONSABLE_TM_USUARIO" FromRole="Usuario" ToRole="Responsable" />
+  </EntityType>
+  <Association Name="TM_PROYECTO_TM_USUARIO">
+    <End Role="Usuario" Type="Self.Usuario" Multiplicity="0..1" />
+    <End Role="Proyecto" Type="Self.Proyecto" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Usuario">
+        <PropertyRef Name="codigo" />
+      </Principal>
+      <Dependent Role="Proyecto">
+        <PropertyRef Name="responsable" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="TM_TAREA_TM_PROYECTO">
+    <End Role="Proyecto" Type="Self.Proyecto" Multiplicity="0..1" />
+    <End Role="Tarea" Type="Self.Tarea" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Proyecto">
+        <PropertyRef Name="codigo" />
+      </Principal>
+      <Dependent Role="Tarea">
+        <PropertyRef Name="codigo_proyecto" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="TM_RESPONSABLE_TM_TAREA">
+    <End Role="Tarea" Type="Self.Tarea" Multiplicity="0..1" />
+    <End Role="Responsable" Type="Self.Responsable" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Tarea">
+        <PropertyRef Name="codigo" />
+      </Principal>
+      <Dependent Role="Responsable">
+        <PropertyRef Name="codigo_tarea" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="TM_RESPONSABLE_TM_USUARIO">
+    <End Role="Usuario" Type="Self.Usuario" Multiplicity="0..1" />
+    <End Role="Responsable" Type="Self.Responsable" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Usuario">
+        <PropertyRef Name="codigo" />
+      </Principal>
+      <Dependent Role="Responsable">
+        <PropertyRef Name="codigo_usuario" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <EntityContainer Name="SeguimientoProyectosEntities" annotation:LazyLoadingEnabled="true">
+    <EntitySet Name="Proyecto" EntityType="Self.Proyecto" />
+    <EntitySet Name="Responsable" EntityType="Self.Responsable" />
+    <EntitySet Name="Tarea" EntityType="Self.Tarea" />
+    <EntitySet Name="Usuario" EntityType="Self.Usuario" />
+    <AssociationSet Name="TM_PROYECTO_TM_USUARIO" Association="Self.TM_PROYECTO_TM_USUARIO">
+      <End Role="Usuario" EntitySet="Usuario" />
+      <End Role="Proyecto" EntitySet="Proyecto" />
+    </AssociationSet>
+    <AssociationSet Name="TM_TAREA_TM_PROYECTO" Association="Self.TM_TAREA_TM_PROYECTO">
+      <End Role="Proyecto" EntitySet="Proyecto" />
+      <End Role="Tarea" EntitySet="Tarea" />
+    </AssociationSet>
+    <AssociationSet Name="TM_RESPONSABLE_TM_TAREA" Association="Self.TM_RESPONSABLE_TM_TAREA">
+      <End Role="Tarea" EntitySet="Tarea" />
+      <End Role="Responsable" EntitySet="Responsable" />
+    </AssociationSet>
+    <AssociationSet Name="TM_RESPONSABLE_TM_USUARIO" Association="Self.TM_RESPONSABLE_TM_USUARIO">
+      <End Role="Usuario" EntitySet="Usuario" />
+      <End Role="Responsable" EntitySet="Responsable" />
+    </AssociationSet>
+  </EntityContainer>
+</Schema>

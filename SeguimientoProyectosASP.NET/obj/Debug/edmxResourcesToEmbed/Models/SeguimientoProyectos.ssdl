@@ -1,0 +1,111 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="SeguimientoProyectosModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+  <EntityType Name="Proyecto">
+    <Key>
+      <PropertyRef Name="codigo" />
+    </Key>
+    <Property Name="codigo" Type="numeric" Precision="7" Scale="0" Nullable="false" />
+    <Property Name="nombre" Type="varchar" MaxLength="150" />
+    <Property Name="descripcion" Type="varchar" MaxLength="500" />
+    <Property Name="fecha_inicio" Type="date" />
+    <Property Name="fecha_fin" Type="date" />
+    <Property Name="responsable" Type="varchar" MaxLength="30" />
+  </EntityType>
+  <EntityType Name="Responsable">
+    <Key>
+      <PropertyRef Name="codigo" />
+    </Key>
+    <Property Name="codigo" Type="numeric" Precision="7" Scale="0" Nullable="false" />
+    <Property Name="codigo_tarea" Type="numeric" Precision="7" Scale="0" />
+    <Property Name="codigo_usuario" Type="varchar" MaxLength="30" />
+  </EntityType>
+  <EntityType Name="Tarea">
+    <Key>
+      <PropertyRef Name="codigo" />
+    </Key>
+    <Property Name="codigo" Type="numeric" Precision="7" Scale="0" Nullable="false" />
+    <Property Name="nombre" Type="varchar" MaxLength="150" />
+    <Property Name="descripcion" Type="varchar" MaxLength="500" />
+    <Property Name="codigo_proyecto" Type="numeric" Precision="7" Scale="0" />
+  </EntityType>
+  <EntityType Name="Usuario">
+    <Key>
+      <PropertyRef Name="codigo" />
+    </Key>
+    <Property Name="codigo" Type="varchar" MaxLength="30" Nullable="false" />
+    <Property Name="nombres" Type="varchar" MaxLength="150" />
+    <Property Name="apellidos" Type="varchar" MaxLength="150" />
+    <Property Name="fecha_nacimiento" Type="date" />
+    <Property Name="password" Type="varchar" MaxLength="32" />
+  </EntityType>
+  <Association Name="TM_PROYECTO_TM_USUARIO">
+    <End Role="Usuario" Type="Self.Usuario" Multiplicity="0..1" />
+    <End Role="Proyecto" Type="Self.Proyecto" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Usuario">
+        <PropertyRef Name="codigo" />
+      </Principal>
+      <Dependent Role="Proyecto">
+        <PropertyRef Name="responsable" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="TM_RESPONSABLE_TM_TAREA">
+    <End Role="Tarea" Type="Self.Tarea" Multiplicity="0..1" />
+    <End Role="Responsable" Type="Self.Responsable" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Tarea">
+        <PropertyRef Name="codigo" />
+      </Principal>
+      <Dependent Role="Responsable">
+        <PropertyRef Name="codigo_tarea" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="TM_RESPONSABLE_TM_USUARIO">
+    <End Role="Usuario" Type="Self.Usuario" Multiplicity="0..1" />
+    <End Role="Responsable" Type="Self.Responsable" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Usuario">
+        <PropertyRef Name="codigo" />
+      </Principal>
+      <Dependent Role="Responsable">
+        <PropertyRef Name="codigo_usuario" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="TM_TAREA_TM_PROYECTO">
+    <End Role="Proyecto" Type="Self.Proyecto" Multiplicity="0..1" />
+    <End Role="Tarea" Type="Self.Tarea" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Proyecto">
+        <PropertyRef Name="codigo" />
+      </Principal>
+      <Dependent Role="Tarea">
+        <PropertyRef Name="codigo_proyecto" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <EntityContainer Name="SeguimientoProyectosModelStoreContainer">
+    <EntitySet Name="Proyecto" EntityType="Self.Proyecto" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Responsable" EntityType="Self.Responsable" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Tarea" EntityType="Self.Tarea" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Usuario" EntityType="Self.Usuario" Schema="dbo" store:Type="Tables" />
+    <AssociationSet Name="TM_PROYECTO_TM_USUARIO" Association="Self.TM_PROYECTO_TM_USUARIO">
+      <End Role="Usuario" EntitySet="Usuario" />
+      <End Role="Proyecto" EntitySet="Proyecto" />
+    </AssociationSet>
+    <AssociationSet Name="TM_RESPONSABLE_TM_TAREA" Association="Self.TM_RESPONSABLE_TM_TAREA">
+      <End Role="Tarea" EntitySet="Tarea" />
+      <End Role="Responsable" EntitySet="Responsable" />
+    </AssociationSet>
+    <AssociationSet Name="TM_RESPONSABLE_TM_USUARIO" Association="Self.TM_RESPONSABLE_TM_USUARIO">
+      <End Role="Usuario" EntitySet="Usuario" />
+      <End Role="Responsable" EntitySet="Responsable" />
+    </AssociationSet>
+    <AssociationSet Name="TM_TAREA_TM_PROYECTO" Association="Self.TM_TAREA_TM_PROYECTO">
+      <End Role="Proyecto" EntitySet="Proyecto" />
+      <End Role="Tarea" EntitySet="Tarea" />
+    </AssociationSet>
+  </EntityContainer>
+</Schema>

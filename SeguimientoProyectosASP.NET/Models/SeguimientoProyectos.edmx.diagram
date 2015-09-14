@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+ <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <edmx:Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <!-- Diagram content (shape and connector positions) -->
+    <edmx:Diagrams>
+      <Diagram DiagramId="34e2059f229d43ec9b20a17badde34fb" Name="Diagram1">
+        <EntityTypeShape EntityType="SeguimientoProyectosModel.Proyecto" Width="1.5" PointX="3" PointY="1" IsExpanded="true" />
+        <EntityTypeShape EntityType="SeguimientoProyectosModel.Responsable" Width="1.5" PointX="7.5" PointY="1.25" IsExpanded="true" />
+        <EntityTypeShape EntityType="SeguimientoProyectosModel.Tarea" Width="1.5" PointX="5.25" PointY="1.125" IsExpanded="true" />
+        <EntityTypeShape EntityType="SeguimientoProyectosModel.Usuario" Width="1.5" PointX="0.75" PointY="1" IsExpanded="true" />
+        <AssociationConnector Association="SeguimientoProyectosModel.TM_PROYECTO_TM_USUARIO" ManuallyRouted="false" />
+        <AssociationConnector Association="SeguimientoProyectosModel.TM_TAREA_TM_PROYECTO" ManuallyRouted="false" />
+        <AssociationConnector Association="SeguimientoProyectosModel.TM_RESPONSABLE_TM_TAREA" ManuallyRouted="false" />
+        <AssociationConnector Association="SeguimientoProyectosModel.TM_RESPONSABLE_TM_USUARIO" ManuallyRouted="false" />
+      </Diagram>
+    </edmx:Diagrams>
+  </edmx:Designer>
+</edmx:Edmx>

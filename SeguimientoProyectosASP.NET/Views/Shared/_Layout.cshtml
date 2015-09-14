@@ -1,0 +1,25 @@
+﻿<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>@ViewBag.Title - Seguimiento Proyectos</title>
+        @Styles.Render("~/Content/bootstrap.min.css")
+        @Styles.Render("~/Content/font-awesome.min.css")
+        @Styles.Render("~/Content/fileinput.min.css")
+        @Styles.Render("~/Content/jquery-ui.min.css")
+        @Styles.Render("~/Content/style.css")
+        @Scripts.Render("~/Scripts/jquery-1.10.2.min.js")
+        @Scripts.Render("~/Scripts/bootstrap.min.js")
+        @Scripts.Render("~/Scripts/docs.min.js")
+        @Scripts.Render("~/Scripts/fileinput.min.js")
+        @Scripts.Render("~/Scripts/jquery-ui.min.js")
+    </head>
+    <body>
+        @Html.Partial("_MenuPartial")
+        <div class="container theme-showcase" role="main" style="margin-top: 30px;">
+            @RenderBody()
+            @Html.Partial("_FooterPartial")
+        </div>
+    </body>
+</html>
