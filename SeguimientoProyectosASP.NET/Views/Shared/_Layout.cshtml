@@ -1,19 +1,35 @@
 ﻿<!DOCTYPE html>
 <html>
     <head>
-        <meta charset="utf-8" />
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta name="robots" content="no-cache" />
+        <meta name="description" content="Práctica de ASP .NET: mantenimiento a las tablas del esquema: seguimiento de proyectos." />
+        <meta name="keywords" content="asp .net, práctica, aplicación" />
+        <meta name="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no" />
+        <meta name="Content-type" content="text/html; charset=utf-8" />
+        <meta name="expires" content="0" />
+        <meta name="pragma" content="no-cache" />
         <title>@ViewBag.Title - Seguimiento Proyectos</title>
-        @Styles.Render("~/Content/bootstrap.min.css")
-        @Styles.Render("~/Content/font-awesome.min.css")
-        @Styles.Render("~/Content/fileinput.min.css")
-        @Styles.Render("~/Content/jquery-ui.min.css")
+        <!-- CSS -->
+        @Styles.Render("~/Content/bootstrap.css")
+        @Styles.Render("~/Content/bootstrap-responsive.css")
+        @Styles.Render("~/Content/bootstrap-theme.css")
+        @Styles.Render("~/Content/font-awesome.css")
+        @Styles.Render("~/Content/fileinput.css")
+        @Styles.Render("~/Content/jquery-ui.css")
         @Styles.Render("~/Content/style.css")
-        @Scripts.Render("~/Scripts/jquery-1.10.2.min.js")
-        @Scripts.Render("~/Scripts/bootstrap.min.js")
-        @Scripts.Render("~/Scripts/docs.min.js")
-        @Scripts.Render("~/Scripts/fileinput.min.js")
-        @Scripts.Render("~/Scripts/jquery-ui.min.js")
+        <!-- JS -->
+        @Scripts.Render("~/Scripts/jquery-1.11.3.js")
+        @Scripts.Render("~/Scripts/bootstrap.js")
+        @Scripts.Render("~/Scripts/fileinput.js")
+        @Scripts.Render("~/Scripts/fileinput_locale_es.js")
+        @Scripts.Render("~/Scripts/jquery-ui.js")
+
+        <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+        <!--[if lt IE 9]>
+            <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
+            <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+        <![endif]-->
     </head>
     <body>
         @Html.Partial("_MenuPartial")
