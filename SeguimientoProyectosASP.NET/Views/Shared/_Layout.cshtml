@@ -12,18 +12,14 @@
         <title>@ViewBag.Title - Seguimiento Proyectos</title>
         <!-- CSS -->
         @Styles.Render("~/Content/bootstrap.css")
-        @Styles.Render("~/Content/bootstrap-responsive.css")
+        <!--@Styles.Render("~/Content/bootstrap-responsive.css")-->
         @Styles.Render("~/Content/bootstrap-theme.css")
         @Styles.Render("~/Content/font-awesome.css")
         @Styles.Render("~/Content/fileinput.css")
         @Styles.Render("~/Content/jquery-ui.css")
         @Styles.Render("~/Content/style.css")
-        <!-- JS -->
-        @Scripts.Render("~/Scripts/jquery-1.11.3.js")
-        @Scripts.Render("~/Scripts/bootstrap.js")
-        @Scripts.Render("~/Scripts/fileinput.js")
-        @Scripts.Render("~/Scripts/fileinput_locale_es.js")
-        @Scripts.Render("~/Scripts/jquery-ui.js")
+        @Styles.Render("~/Content/jquery.dataTables.css")
+        @Styles.Render("~/Content/dataTables.bootstrap.css")
 
         <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
         <!--[if lt IE 9]>
@@ -37,5 +33,15 @@
             @RenderBody()
             @Html.Partial("_FooterPartial")
         </div>
+        <!-- JS -->
+        @Scripts.Render("~/Scripts/jquery-1.11.3.js")
+        @Scripts.Render("~/Scripts/bootstrap.js")
+        @Scripts.Render("~/Scripts/fileinput.js")
+        @Scripts.Render("~/Scripts/fileinput_locale_es.js")
+        @Scripts.Render("~/Scripts/jquery-ui.js")
+        @Scripts.Render("~/Scripts/jquery.dataTables.js")
+        @Scripts.Render("~/Scripts/dataTables.bootstrap.js")
+
+        @RenderSection("Scripts", required: false)
     </body>
 </html>
