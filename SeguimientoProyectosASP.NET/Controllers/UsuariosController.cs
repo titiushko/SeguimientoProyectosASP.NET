@@ -10,9 +10,14 @@ using SeguimientoProyectosASP.NET.Models;
 
 namespace SeguimientoProyectosASP.NET.Controllers
 {
-    public class UsuariosController : Controller
+    public class UsuariosController : BaseController
     {
         private SeguimientoProyectosEntities db = new SeguimientoProyectosEntities();
+
+        public UsuariosController()
+        {
+            ViewBag.opcionMenu = new string[] { "", "", "", "", "active" };
+        }
 
         // GET: Usuarios
         public ActionResult Index()

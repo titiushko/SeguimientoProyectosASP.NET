@@ -161,6 +161,7 @@
     <Compile Include="App_Start\RouteConfig.cs" />
     <Compile Include="App_Start\Startup.Auth.cs" />
     <Compile Include="Controllers\AccountController.cs" />
+    <Compile Include="Controllers\BaseController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
     <Compile Include="Controllers\ManageController.cs" />
     <Compile Include="Controllers\ProyectosController.cs" />
@@ -204,6 +205,10 @@
     <Compile Include="Startup.cs" />
   </ItemGroup>
   <ItemGroup>
+    <Content Include="assets\flash\ZeroClipboard.swf" />
+    <Content Include="Content\alertify.bootstrap.css" />
+    <Content Include="Content\alertify.core.css" />
+    <Content Include="Content\alertify.default.css" />
     <Content Include="Content\bootstrap-responsive.css" />
     <Content Include="Content\bootstrap-theme.css" />
     <Content Include="Content\bootstrap.css" />
@@ -251,6 +256,7 @@
       <DependentUpon>SeguimientoProyectos.edmx</DependentUpon>
       <LastGenOutput>SeguimientoProyectos.cs</LastGenOutput>
     </Content>
+    <Content Include="Scripts\alertify.js" />
     <Content Include="Scripts\bootstrap.js" />
     <EntityDeploy Include="Models\SeguimientoProyectos.edmx">
       <Generator>EntityModelCodeGenerator</Generator>
@@ -270,6 +276,8 @@
     <Content Include="Scripts\jquery-1.11.3.js" />
     <Content Include="Scripts\jquery-ui.js" />
     <Content Include="Scripts\jquery.dataTables.js" />
+    <Content Include="Scripts\jquery.validate.js" />
+    <Content Include="Scripts\jquery.validate.unobtrusive.js" />
     <Content Include="Web.config" />
     <Content Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
@@ -312,6 +320,7 @@
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
+    <Folder Include="Views\Base\" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="fonts\glyphicons-halflings-regular.woff" />

@@ -10,9 +10,14 @@ using SeguimientoProyectosASP.NET.Models;
 
 namespace SeguimientoProyectosASP.NET.Controllers
 {
-    public class TareasController : Controller
+    public class TareasController : BaseController
     {
         private SeguimientoProyectosEntities db = new SeguimientoProyectosEntities();
+
+        public TareasController()
+        {
+            ViewBag.opcionMenu = new string[] { "", "", "active", "", "" };
+        }
 
         // GET: Tareas
         public ActionResult Index()

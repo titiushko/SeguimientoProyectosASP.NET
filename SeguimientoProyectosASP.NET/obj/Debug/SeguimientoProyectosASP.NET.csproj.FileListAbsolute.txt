@@ -56,7 +56,6 @@ c:\users\tito.miguel\documents\visual studio 2013\Projects\SeguimientoProyectosA
 C:\tito.miguel\programas\herramientas\git\repositorios\SeguimientoProyectosASP.NET\SeguimientoProyectosASP.NET\bin\SeguimientoProyectosASP.NET.dll.config
 C:\tito.miguel\programas\herramientas\git\repositorios\SeguimientoProyectosASP.NET\SeguimientoProyectosASP.NET\bin\SeguimientoProyectosASP.NET.dll
 C:\tito.miguel\programas\herramientas\git\repositorios\SeguimientoProyectosASP.NET\SeguimientoProyectosASP.NET\bin\SeguimientoProyectosASP.NET.pdb
-C:\tito.miguel\programas\herramientas\git\repositorios\SeguimientoProyectosASP.NET\SeguimientoProyectosASP.NET\bin\Antlr3.Runtime.dll
 C:\tito.miguel\programas\herramientas\git\repositorios\SeguimientoProyectosASP.NET\SeguimientoProyectosASP.NET\bin\EntityFramework.dll
 C:\tito.miguel\programas\herramientas\git\repositorios\SeguimientoProyectosASP.NET\SeguimientoProyectosASP.NET\bin\EntityFramework.SqlServer.dll
 C:\tito.miguel\programas\herramientas\git\repositorios\SeguimientoProyectosASP.NET\SeguimientoProyectosASP.NET\bin\Microsoft.AspNet.Identity.Core.dll
@@ -73,7 +72,6 @@ C:\tito.miguel\programas\herramientas\git\repositorios\SeguimientoProyectosASP.N
 C:\tito.miguel\programas\herramientas\git\repositorios\SeguimientoProyectosASP.NET\SeguimientoProyectosASP.NET\bin\Microsoft.Owin.Security.Twitter.dll
 C:\tito.miguel\programas\herramientas\git\repositorios\SeguimientoProyectosASP.NET\SeguimientoProyectosASP.NET\bin\Microsoft.Web.Infrastructure.dll
 C:\tito.miguel\programas\herramientas\git\repositorios\SeguimientoProyectosASP.NET\SeguimientoProyectosASP.NET\bin\Newtonsoft.Json.dll
-C:\tito.miguel\programas\herramientas\git\repositorios\SeguimientoProyectosASP.NET\SeguimientoProyectosASP.NET\bin\Owin.dll
 C:\tito.miguel\programas\herramientas\git\repositorios\SeguimientoProyectosASP.NET\SeguimientoProyectosASP.NET\bin\System.Web.Helpers.dll
 C:\tito.miguel\programas\herramientas\git\repositorios\SeguimientoProyectosASP.NET\SeguimientoProyectosASP.NET\bin\System.Web.Mvc.dll
 C:\tito.miguel\programas\herramientas\git\repositorios\SeguimientoProyectosASP.NET\SeguimientoProyectosASP.NET\bin\System.Web.Optimization.dll
@@ -81,7 +79,6 @@ C:\tito.miguel\programas\herramientas\git\repositorios\SeguimientoProyectosASP.N
 C:\tito.miguel\programas\herramientas\git\repositorios\SeguimientoProyectosASP.NET\SeguimientoProyectosASP.NET\bin\System.Web.WebPages.Deployment.dll
 C:\tito.miguel\programas\herramientas\git\repositorios\SeguimientoProyectosASP.NET\SeguimientoProyectosASP.NET\bin\System.Web.WebPages.dll
 C:\tito.miguel\programas\herramientas\git\repositorios\SeguimientoProyectosASP.NET\SeguimientoProyectosASP.NET\bin\System.Web.WebPages.Razor.dll
-C:\tito.miguel\programas\herramientas\git\repositorios\SeguimientoProyectosASP.NET\SeguimientoProyectosASP.NET\bin\WebGrease.dll
 C:\tito.miguel\programas\herramientas\git\repositorios\SeguimientoProyectosASP.NET\SeguimientoProyectosASP.NET\bin\System.Web.Helpers.xml
 C:\tito.miguel\programas\herramientas\git\repositorios\SeguimientoProyectosASP.NET\SeguimientoProyectosASP.NET\bin\System.Web.Mvc.xml
 C:\tito.miguel\programas\herramientas\git\repositorios\SeguimientoProyectosASP.NET\SeguimientoProyectosASP.NET\bin\System.Web.Optimization.xml
@@ -108,3 +105,4 @@ C:\tito.miguel\programas\herramientas\git\repositorios\SeguimientoProyectosASP.N
 C:\tito.miguel\programas\herramientas\git\repositorios\SeguimientoProyectosASP.NET\SeguimientoProyectosASP.NET\obj\Debug\SeguimientoProyectosASP.NET.csprojResolveAssemblyReference.cache
 C:\tito.miguel\programas\herramientas\git\repositorios\SeguimientoProyectosASP.NET\SeguimientoProyectosASP.NET\obj\Debug\SeguimientoProyectosASP.NET.dll
 C:\tito.miguel\programas\herramientas\git\repositorios\SeguimientoProyectosASP.NET\SeguimientoProyectosASP.NET\obj\Debug\SeguimientoProyectosASP.NET.pdb
+C:\tito.miguel\programas\herramientas\git\repositorios\SeguimientoProyectosASP.NET\SeguimientoProyectosASP.NET\bin\Microsoft.Web.Infrastructure.xml

@@ -10,16 +10,19 @@ using SeguimientoProyectosASP.NET.Models;
 
 namespace SeguimientoProyectosASP.NET.Controllers
 {
-    public class ProyectosController : Controller
+    public class ProyectosController : BaseController
     {
         private SeguimientoProyectosEntities db = new SeguimientoProyectosEntities();
-        private string[] opcion_menu = new string[] { "", "active", "", "", "" };
+        
+        public ProyectosController()
+        {
+            ViewBag.opcionMenu = new string[] { "", "active", "", "", "" };
+        }
 
         // GET: Proyectos
         [HttpGet]
         public ActionResult Index()
         {
-            ViewBag.opcionMenu = this.opcion_menu;
             ViewBag.Title = "Lista Proyectos";
 
             var proyecto = db.Proyecto.Include(p => p.Usuario);
@@ -31,8 +34,6 @@ namespace SeguimientoProyectosASP.NET.Controllers
         [HttpGet]
         public ActionResult Details(decimal id)
         {
-            ViewBag.opcionMenu = this.opcion_menu;
-
             if (id == null)
             {
                 return new HttpStatusCodeResult(HttpStatusCode.BadRequest);
@@ -51,7 +52,6 @@ namespace SeguimientoProyectosASP.NET.Controllers
         [HttpGet]
         public ActionResult Create()
         {
-            ViewBag.opcionMenu = this.opcion_menu;
             ViewBag.responsable = new SelectList(db.Usuario, "codigo", "nombres");
 
             return View();
@@ -79,8 +79,6 @@ namespace SeguimientoProyectosASP.NET.Controllers
         [HttpGet]
         public ActionResult Edit(decimal id)
         {
-            ViewBag.opcionMenu = this.opcion_menu;
-
             if (id == null)
             {
                 return new HttpStatusCodeResult(HttpStatusCode.BadRequest);
@@ -118,8 +116,6 @@ namespace SeguimientoProyectosASP.NET.Controllers
         [HttpGet]
         public ActionResult Delete(decimal id)
         {
-            ViewBag.opcionMenu = this.opcion_menu;
-
             if (id == null)
             {
                 return new HttpStatusCodeResult(HttpStatusCode.BadRequest);

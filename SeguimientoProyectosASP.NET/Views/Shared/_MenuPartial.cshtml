@@ -11,7 +11,7 @@
         </div>
         <div class="navbar-collapse collapse">
             <ul class="nav navbar-nav">
-                <li class="dropdown @ViewBag.opcionMenu[0]">@Html.ActionLink("Inicio", "Index", "Home")</li>
+                <li class="dropdown @ViewBag.opcionMenu[0]"><a href="@Url.Action("Index", "Home")"><i class="fa fa-dashboard"></i> Inicio</a></li>
                 <li class="dropdown @ViewBag.opcionMenu[1]">
 					<a href="#" class="dropdown-toggle" data-toggle="dropdown">
                         <i class="fa fa-archive"></i> Proyectos <span class="caret"></span>
@@ -21,6 +21,33 @@
                         <li>@Html.ActionLink("Nuevo Proyecto", "Create", "Proyectos")</li>
 					</ul>
 				</li>
+                <li class="dropdown @ViewBag.opcionMenu[2]">
+                    <a href="#" class="dropdown-toggle" data-toggle="dropdown">
+                        <i class="fa fa-tasks"></i> Tareas <span class="caret"></span>
+                    </a>
+                    <ul class="dropdown-menu" role="menu">
+                        <li>@Html.ActionLink("Lista Tareas", "Index", "Tareas")</li>
+                        <li>@Html.ActionLink("Nueva Tarea", "Create", "Tareas")</li>
+                    </ul>
+                </li>
+                <li class="dropdown @ViewBag.opcionMenu[3]">
+                    <a href="#" class="dropdown-toggle" data-toggle="dropdown">
+                        <i class="fa fa-user-secret"></i> Responsables <span class="caret"></span>
+                    </a>
+                    <ul class="dropdown-menu" role="menu">
+                        <li>@Html.ActionLink("Lista Responsables", "Index", "Responsables")</li>
+                        <li>@Html.ActionLink("Nuevo Responsable", "Create", "Responsables")</li>
+                    </ul>
+                </li>
+                <li class="dropdown @ViewBag.opcionMenu[4]">
+                    <a href="#" class="dropdown-toggle" data-toggle="dropdown">
+                        <i class="fa fa-users"></i> Usuarios <span class="caret"></span>
+                    </a>
+                    <ul class="dropdown-menu" role="menu">
+                        <li>@Html.ActionLink("Lista Usuarios", "Index", "Usuarios")</li>
+                        <li>@Html.ActionLink("Nuevo Usuario", "Create", "Usuarios")</li>
+                    </ul>
+                </li>
             </ul>
             <div class="nav navbar-nav navbar-right">
                 <a href="#" class="dropdown-toggle btn btn-info navbar-btn" data-toggle="dropdown" aria-expanded="false">
