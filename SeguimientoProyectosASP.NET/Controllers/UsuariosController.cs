@@ -16,7 +16,7 @@ namespace SeguimientoProyectosASP.NET.Controllers
 
         public UsuariosController()
         {
-            ViewBag.opcionMenu = new string[] { "", "", "", "", "active" };
+            ViewBag.opcionMenu[4] = "active";
         }
 
         // GET: Usuarios

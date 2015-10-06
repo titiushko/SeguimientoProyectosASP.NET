@@ -16,7 +16,7 @@ namespace SeguimientoProyectosASP.NET.Controllers
 
         public ResponsablesController()
         {
-            ViewBag.opcionMenu = new string[] { "", "", "", "active", "" };
+            ViewBag.opcionMenu[3] = "active";
         }
 
         // GET: Responsables

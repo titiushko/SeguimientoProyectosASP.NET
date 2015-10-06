@@ -12,7 +12,7 @@ namespace SeguimientoProyectosASP.NET.Controllers
 
         public ActionResult Index()
         {
-            ViewBag.opcionMenu = this.opcion_menu;
+            ViewBag.opcionMenu[0] = "active";
             ViewBag.Title = "Inicio";
 
             return View();
