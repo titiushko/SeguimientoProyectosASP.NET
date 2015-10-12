@@ -79,6 +79,7 @@ C:\tito.miguel\programas\herramientas\git\repositorios\SeguimientoProyectosASP.N
 C:\tito.miguel\programas\herramientas\git\repositorios\SeguimientoProyectosASP.NET\SeguimientoProyectosASP.NET\bin\System.Web.WebPages.Deployment.dll
 C:\tito.miguel\programas\herramientas\git\repositorios\SeguimientoProyectosASP.NET\SeguimientoProyectosASP.NET\bin\System.Web.WebPages.dll
 C:\tito.miguel\programas\herramientas\git\repositorios\SeguimientoProyectosASP.NET\SeguimientoProyectosASP.NET\bin\System.Web.WebPages.Razor.dll
+C:\tito.miguel\programas\herramientas\git\repositorios\SeguimientoProyectosASP.NET\SeguimientoProyectosASP.NET\bin\Microsoft.Web.Infrastructure.xml
 C:\tito.miguel\programas\herramientas\git\repositorios\SeguimientoProyectosASP.NET\SeguimientoProyectosASP.NET\bin\System.Web.Helpers.xml
 C:\tito.miguel\programas\herramientas\git\repositorios\SeguimientoProyectosASP.NET\SeguimientoProyectosASP.NET\bin\System.Web.Mvc.xml
 C:\tito.miguel\programas\herramientas\git\repositorios\SeguimientoProyectosASP.NET\SeguimientoProyectosASP.NET\bin\System.Web.Optimization.xml
@@ -86,7 +87,6 @@ C:\tito.miguel\programas\herramientas\git\repositorios\SeguimientoProyectosASP.N
 C:\tito.miguel\programas\herramientas\git\repositorios\SeguimientoProyectosASP.NET\SeguimientoProyectosASP.NET\bin\System.Web.WebPages.xml
 C:\tito.miguel\programas\herramientas\git\repositorios\SeguimientoProyectosASP.NET\SeguimientoProyectosASP.NET\bin\System.Web.WebPages.Deployment.xml
 C:\tito.miguel\programas\herramientas\git\repositorios\SeguimientoProyectosASP.NET\SeguimientoProyectosASP.NET\bin\System.Web.WebPages.Razor.xml
-C:\tito.miguel\programas\herramientas\git\repositorios\SeguimientoProyectosASP.NET\SeguimientoProyectosASP.NET\bin\Antlr3.Runtime.pdb
 C:\tito.miguel\programas\herramientas\git\repositorios\SeguimientoProyectosASP.NET\SeguimientoProyectosASP.NET\bin\Newtonsoft.Json.xml
 C:\tito.miguel\programas\herramientas\git\repositorios\SeguimientoProyectosASP.NET\SeguimientoProyectosASP.NET\bin\EntityFramework.xml
 C:\tito.miguel\programas\herramientas\git\repositorios\SeguimientoProyectosASP.NET\SeguimientoProyectosASP.NET\bin\EntityFramework.SqlServer.xml
@@ -102,7 +102,5 @@ C:\tito.miguel\programas\herramientas\git\repositorios\SeguimientoProyectosASP.N
 C:\tito.miguel\programas\herramientas\git\repositorios\SeguimientoProyectosASP.NET\SeguimientoProyectosASP.NET\bin\Microsoft.Owin.Security.Google.xml
 C:\tito.miguel\programas\herramientas\git\repositorios\SeguimientoProyectosASP.NET\SeguimientoProyectosASP.NET\bin\Microsoft.Owin.Security.Twitter.xml
 C:\tito.miguel\programas\herramientas\git\repositorios\SeguimientoProyectosASP.NET\SeguimientoProyectosASP.NET\bin\Microsoft.Owin.Security.MicrosoftAccount.xml
-C:\tito.miguel\programas\herramientas\git\repositorios\SeguimientoProyectosASP.NET\SeguimientoProyectosASP.NET\obj\Debug\SeguimientoProyectosASP.NET.csprojResolveAssemblyReference.cache
 C:\tito.miguel\programas\herramientas\git\repositorios\SeguimientoProyectosASP.NET\SeguimientoProyectosASP.NET\obj\Debug\SeguimientoProyectosASP.NET.dll
 C:\tito.miguel\programas\herramientas\git\repositorios\SeguimientoProyectosASP.NET\SeguimientoProyectosASP.NET\obj\Debug\SeguimientoProyectosASP.NET.pdb
-C:\tito.miguel\programas\herramientas\git\repositorios\SeguimientoProyectosASP.NET\SeguimientoProyectosASP.NET\bin\Microsoft.Web.Infrastructure.xml

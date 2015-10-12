@@ -6,10 +6,8 @@ using System.Web.Mvc;
 
 namespace SeguimientoProyectosASP.NET.Controllers
 {
-    public class HomeController : Controller
+    public class HomeController : BaseController
     {
-        private string[] opcion_menu = new string[] { "active", "", "", "", "" };
-
         public ActionResult Index()
         {
             ViewBag.opcionMenu[0] = "active";
